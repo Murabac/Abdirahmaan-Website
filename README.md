@@ -29,6 +29,12 @@ npm run build
 npm run preview
 ```
 
+## Netlify
+
+The repo includes `netlify.toml`: build runs `npm run build` and **publishes the `dist` folder**. That is required for Vite; if Netlify publishes the repository root instead, the browser loads `/src/main.tsx` and fails (wrong MIME type / not a built bundle).
+
+In the Netlify UI, confirm **Build command** is `npm run build` and **Publish directory** is `dist` (or leave them blank so `netlify.toml` is used). Commit `netlify.toml`, push, and trigger a new deploy.
+
 ## Customize
 
 - Replace the brand logo: `public/logo.png`.  
