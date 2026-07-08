@@ -1,47 +1,34 @@
 export function Skills() {
   const skillCategories = [
     {
-      title: 'Frontend',
+      title: 'Engineering & delivery',
       color: 'primary',
       skills: [
-        { name: 'React', level: 95 },
-        { name: 'TypeScript', level: 90 },
-        { name: 'Tailwind CSS', level: 92 },
-        { name: 'Next.js', level: 88 },
-        { name: 'HTML/CSS', level: 98 },
+        { name: '.NET / C# development', level: 92 },
+        { name: 'Web development', level: 90 },
+        { name: 'API design & integration', level: 90 },
+        { name: 'Database management', level: 88 },
+        { name: 'Software development lifecycle', level: 90 },
       ],
     },
     {
-      title: 'Mobile Development',
+      title: 'Project leadership',
       color: 'secondary',
       skills: [
-        { name: 'React Native', level: 88 },
-        { name: 'Flutter', level: 85 },
-        { name: 'iOS (Swift)', level: 80 },
-        { name: 'Android (Kotlin)', level: 82 },
-        { name: 'Expo', level: 90 },
+        { name: 'Project management', level: 94 },
+        { name: 'Stakeholder engagement', level: 92 },
+        { name: 'Team leadership', level: 90 },
+        { name: 'Resource allocation', level: 88 },
+        { name: 'Problem solving', level: 93 },
       ],
     },
     {
-      title: 'Backend & Software',
+      title: 'Craft & quality',
       color: 'accent',
       skills: [
-        { name: 'Node.js', level: 90 },
-        { name: 'Python', level: 85 },
-        { name: 'Java', level: 82 },
-        { name: 'C#/.NET', level: 80 },
-        { name: 'REST APIs', level: 93 },
-      ],
-    },
-    {
-      title: 'Database & Cloud',
-      color: 'primary',
-      skills: [
-        { name: 'MongoDB', level: 88 },
-        { name: 'PostgreSQL', level: 85 },
-        { name: 'Firebase', level: 90 },
-        { name: 'AWS', level: 82 },
-        { name: 'Docker', level: 80 },
+        { name: 'Programming & code optimisation', level: 90 },
+        { name: 'Creative design (media & UI)', level: 85 },
+        { name: 'Certified application developer', level: 88 },
       ],
     },
   ];
@@ -56,29 +43,29 @@ export function Skills() {
   };
 
   return (
-    <section id="skills" className="bg-gradient-to-br from-gray-50 to-white px-4 py-20">
+    <section id="skills" className="bg-gradient-to-br from-gray-50 to-white px-4 py-12 sm:px-6 sm:py-16 md:py-20">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl text-foreground md:text-5xl">Skills & Expertise</h2>
+        <div className="mb-10 text-center sm:mb-16">
+          <h2 className="mb-4 text-2xl text-foreground sm:text-3xl md:text-5xl">Skills & expertise</h2>
           <div className="mx-auto mb-6 h-1 w-20 bg-gradient-to-r from-primary via-secondary to-accent"></div>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            A comprehensive skill set built through years of hands-on experience and continuous learning
+            Core strengths from my CV — engineering, delivery leadership, and product-minded execution.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-5xl gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {skillCategories.map((category, categoryIndex) => (
             <div
               key={categoryIndex}
-              className="rounded-xl border border-border bg-white p-8 shadow-sm transition-shadow hover:shadow-lg"
+              className="rounded-xl border border-border bg-white p-5 shadow-sm transition-shadow sm:p-8 sm:hover:shadow-lg"
             >
-              <h3 className="mb-6 text-2xl text-foreground">{category.title}</h3>
+              <h3 className="mb-4 text-xl text-foreground sm:mb-6 sm:text-2xl">{category.title}</h3>
               <div className="space-y-5">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex}>
-                    <div className="mb-2 flex justify-between">
-                      <span className="text-foreground">{skill.name}</span>
-                      <span className="text-muted-foreground">{skill.level}%</span>
+                    <div className="mb-2 flex justify-between gap-2">
+                      <span className="min-w-0 text-sm text-foreground sm:text-base">{skill.name}</span>
+                      <span className="shrink-0 text-muted-foreground">{skill.level}%</span>
                     </div>
                     <div className="h-2 overflow-hidden rounded-full bg-gray-200">
                       <div
@@ -94,18 +81,27 @@ export function Skills() {
         </div>
 
         <div className="mt-16 text-center">
-          <p className="mb-6 text-muted-foreground">Always learning and exploring new technologies</p>
+          <p className="mb-6 text-muted-foreground">Stack & domains I work in most often</p>
           <div className="flex flex-wrap justify-center gap-3">
-            {['React', 'TypeScript', 'Node.js', 'Tailwind', 'Next.js', 'MongoDB', 'Git', 'Figma', 'Docker'].map(
-              (tech, index) => (
-                <span
-                  key={index}
-                  className="rounded-full border border-border bg-gradient-to-r from-primary/10 to-secondary/10 px-4 py-2 text-foreground transition-shadow hover:shadow-md"
-                >
-                  {tech}
-                </span>
-              ),
-            )}
+            {[
+              '.NET',
+              'C#',
+              'REST APIs',
+              'SQL Server',
+              'Azure',
+              'Broadcast tech',
+              'Agile / PM',
+              'Logistics software',
+              'Media production',
+              'Git',
+            ].map((tech, index) => (
+              <span
+                key={index}
+                className="rounded-full border border-border bg-gradient-to-r from-primary/10 to-secondary/10 px-4 py-2 text-foreground transition-shadow hover:shadow-md"
+              >
+                {tech}
+              </span>
+            ))}
           </div>
         </div>
       </div>

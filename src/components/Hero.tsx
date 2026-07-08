@@ -14,7 +14,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-teal-50 to-green-50 px-4 pt-16"
+      className="relative flex min-h-[100dvh] items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-teal-50 to-green-50 px-4 pb-8 pt-20 sm:px-6 sm:pt-24"
     >
       <ParticlesBackground />
 
@@ -27,27 +27,32 @@ export function Hero() {
           />
         </div>
 
-        <h1 className="mb-6 text-4xl text-foreground md:text-6xl lg:text-7xl">
-          Hi, I'm <span className="text-primary">Abdirahman Mire</span>
+        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-secondary md:text-base">
+          Senior software developer & project manager
+        </p>
+
+        <h1 className="mb-6 text-balance text-3xl leading-tight text-foreground sm:text-4xl md:text-6xl lg:text-7xl">
+          Hi, I'm <span className="text-primary">Abdirahmaan Mohamed</span>
         </h1>
 
-        <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground md:text-xl">
-          Crafting beautiful web applications, powerful software solutions, and seamless mobile
-          experiences with modern technologies
+        <p className="mx-auto mb-8 max-w-3xl text-pretty text-base text-muted-foreground sm:text-lg md:text-xl">
+          I build custom business systems, broadcast automation, and scalable technical solutions — from .NET and APIs
+          to full delivery leadership. I've led international remote teams and shipped high-impact work across
+          e-commerce, construction, logistics, media, healthcare, and NGOs.
         </p>
 
         <div className="flex flex-col justify-center gap-4 sm:flex-row">
           <button
             type="button"
             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-            className="transform rounded-lg bg-primary px-8 py-3 text-primary-foreground transition-all hover:scale-105 hover:opacity-90"
+            className="w-full transform rounded-lg bg-primary px-8 py-3.5 text-primary-foreground transition-all hover:opacity-90 sm:w-auto sm:hover:scale-105"
           >
             View My Work
           </button>
           <button
             type="button"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="transform rounded-lg bg-secondary px-8 py-3 text-secondary-foreground transition-all hover:scale-105 hover:opacity-90"
+            className="w-full transform rounded-lg bg-secondary px-8 py-3.5 text-secondary-foreground transition-all hover:opacity-90 sm:w-auto sm:hover:scale-105"
           >
             Get In Touch
           </button>

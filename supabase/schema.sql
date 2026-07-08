@@ -1,0 +1,15 @@
+-- DEPRECATED: use numbered files in supabase/migrations/ instead.
+--
+-- Run in order:
+--   001_extensions_and_schema.sql
+--   002_contact_messages.sql
+--   003_users.sql
+--   004_rls_policies.sql
+--   006_fix_auth_user_trigger.sql  (before 005)
+--   005_seed_test_admin.sql
+--   007_repair_auth_login.sql   (if login HTTP 500)
+--   008_public_rest_api_views.sql (if REST 406 Invalid schema)
+--   009–012 projects table, RLS, API view, seed
+--   013_project_images_storage.sql (image uploads in admin)
+--
+-- See supabase/README.md for setup and how to add new migrations (006_..., 007_..., etc.).

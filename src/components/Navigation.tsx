@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const LOGO_SRC = '/logo.png';
@@ -9,6 +9,13 @@ interface NavigationProps {
 
 export function Navigation({ onNavigate }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
 
   const scrollToSection = (id: string) => {
     if (onNavigate) {
@@ -89,40 +96,40 @@ export function Navigation({ onNavigate }: NavigationProps) {
       </div>
 
       {isOpen && (
-        <div className="border-t border-border bg-white md:hidden">
-          <div className="space-y-1 px-4 pb-3 pt-2">
+        <div className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-border bg-white md:hidden">
+          <div className="space-y-1 px-4 pb-4 pt-2">
             <button
               type="button"
               onClick={() => scrollToSection('hero')}
-              className="block w-full rounded-md px-3 py-2 text-left text-foreground transition-colors hover:bg-secondary/10 hover:text-primary"
+              className="block min-h-11 w-full rounded-md px-3 py-2.5 text-left text-foreground transition-colors hover:bg-secondary/10 hover:text-primary"
             >
               Home
             </button>
             <button
               type="button"
               onClick={() => scrollToSection('about')}
-              className="block w-full rounded-md px-3 py-2 text-left text-foreground transition-colors hover:bg-secondary/10 hover:text-primary"
+              className="block min-h-11 w-full rounded-md px-3 py-2.5 text-left text-foreground transition-colors hover:bg-secondary/10 hover:text-primary"
             >
               About
             </button>
             <button
               type="button"
               onClick={() => scrollToSection('skills')}
-              className="block w-full rounded-md px-3 py-2 text-left text-foreground transition-colors hover:bg-secondary/10 hover:text-primary"
+              className="block min-h-11 w-full rounded-md px-3 py-2.5 text-left text-foreground transition-colors hover:bg-secondary/10 hover:text-primary"
             >
               Skills
             </button>
             <button
               type="button"
               onClick={() => scrollToSection('projects')}
-              className="block w-full rounded-md px-3 py-2 text-left text-foreground transition-colors hover:bg-secondary/10 hover:text-primary"
+              className="block min-h-11 w-full rounded-md px-3 py-2.5 text-left text-foreground transition-colors hover:bg-secondary/10 hover:text-primary"
             >
               Projects
             </button>
             <button
               type="button"
               onClick={() => scrollToSection('contact')}
-              className="mt-2 block w-full rounded-md bg-primary px-3 py-2 text-left text-primary-foreground transition-opacity hover:opacity-90"
+              className="mt-2 block min-h-11 w-full rounded-md bg-primary px-3 py-2.5 text-left text-primary-foreground transition-opacity hover:opacity-90"
             >
               Contact
             </button>
