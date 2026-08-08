@@ -1,6 +1,6 @@
-# Portfolio — Abdirahmaan Mohamed
+# Portfolio — Abdirahmaan Mire
 
-Personal portfolio site for **Abdirahmaan Mohamed** (CV: senior software developer & project manager), implemented with React and Tailwind CSS v4.
+Personal portfolio site for **Abdirahmaan Mire** (CV: senior software developer & project manager), implemented with React and Tailwind CSS v4.
 
 ## Stack
 
@@ -127,4 +127,4 @@ In the Netlify UI, confirm **Build command** is `npm run build` and **Publish di
 
 ## License
 
-Unless otherwise noted, content and code in this repository are provided by Abdirahmaan Mohamed. Add a `LICENSE` file when you decide how you want others to use the work.
+Unless otherwise noted, content and code in this repository are provided by Abdirahmaan Mire. Add a `LICENSE` file when you decide how you want others to use the work.

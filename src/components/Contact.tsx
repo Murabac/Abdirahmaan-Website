@@ -264,7 +264,7 @@ export function Contact() {
 
       <div className="mt-12 border-t border-border pt-6 text-center sm:mt-20 sm:pt-8">
         <p className="text-sm text-muted-foreground sm:text-base">
-          © {new Date().getFullYear()} Abdirahmaan Mohamed. Built with React & Tailwind CSS.
+          © {new Date().getFullYear()} Abdirahmaan Mire. Built with React & Tailwind CSS.
         </p>
       </div>
     </section>
