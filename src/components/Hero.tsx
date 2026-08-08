@@ -32,7 +32,7 @@ export function Hero() {
         </p>
 
         <h1 className="mb-6 text-balance text-3xl leading-tight text-foreground sm:text-4xl md:text-6xl lg:text-7xl">
-          Hi, I'm <span className="text-primary">Mohamed</span>
+          Hi, I'm <span className="text-primary">Abdirahmaan Mohamed</span>
         </h1>
 
         <p className="mx-auto mb-8 max-w-3xl text-pretty text-base text-muted-foreground sm:text-lg md:text-xl">

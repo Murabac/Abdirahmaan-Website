@@ -4,8 +4,8 @@ import { submitContactMessage } from '../lib/contact';
 import { isSupabaseConfigured } from '../lib/supabase';
 
 const EMAIL = 'arahman.murabac@gmail.com';
-const PHONE_DISPLAY = '0634412241';
-const PHONE_TEL = '+252634412241';
+const PHONE_DISPLAY = '+252 63 474 9276';
+const PHONE_TEL = '+252634749276';
 const SITE = 'https://www.abdirahmaan.dev';
 
 type ContactRow = {
@@ -264,7 +264,7 @@ export function Contact() {
 
       <div className="mt-12 border-t border-border pt-6 text-center sm:mt-20 sm:pt-8">
         <p className="text-sm text-muted-foreground sm:text-base">
-          © {new Date().getFullYear()} Mohamed · 0634412241. Built with React & Tailwind CSS.
+          © {new Date().getFullYear()} Abdirahmaan Mohamed. Built with React & Tailwind CSS.
         </p>
       </div>
     </section>
